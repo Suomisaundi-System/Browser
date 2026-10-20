@@ -10,3 +10,6 @@ Public entry point: https://suomisaundi-system.github.io/
 
 ## Implementation status
 Foundation only. Capability detection is not an implementation of all supported browser APIs. Browser workers are not Node.js servers, hardened sandboxes, or provisioned cloud instances. Durable backend sessions and serverless execution require a trusted provider.
+
+## Browser detection
+Import `detection.js` for `detectBrowser()`, `detectFeatures()`, and `detectEnvironment()`. Includes common browser families and best-effort OS/engine hints. UA spoofing, privacy protections and derivative browsers mean exhaustive identification is impossible; **feature detection is authoritative**. Run `node --test detection.test.mjs`.
